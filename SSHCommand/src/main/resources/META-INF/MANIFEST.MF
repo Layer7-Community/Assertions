@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: layer7-api-8.11.01.jar ganymed-ssh2-263.jar layer7-gui-11.0.
+ 00.14811.jar layer7-policy-11.1.00.dev.jar layer7-utility-11.1.00.dev.j
+ ar layer7-gateway-common-11.1.00.dev.jar
+
