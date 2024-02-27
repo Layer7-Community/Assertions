@@ -32,7 +32,7 @@ configurations {
 }
 
 dependencies {
-    provided 'com.l7tech:layer7-api:8.11.01.+'
+    provided 'com.l7tech:layer7-api:8.11.01+'
     compile 'org.springframework:spring-tx:5.3.5'
     compile 'com.google.guava:guava:16+'
 
