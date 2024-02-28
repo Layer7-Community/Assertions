@@ -2,7 +2,9 @@
 This assertion provides a more configurable approach to protecting against various injection attacks using a managed list of regular expression filters.
 
 # Build
-In order to build the assertion run `gradle build`.
+Use JDK 11 and Gradle 6.7 to build this assertion. Gradle-wrapper is provided in this repository for convenience to avoid the need of installing gradle on your computer.
+
+In order to build the assertion run `./gradlew build`.
  
 This will compile, test, and create the jar file. It will be available in `build/libs`
  
@@ -14,7 +16,7 @@ Docker version of Gateway greatly helps us to deploy assertions / RESTMAN bundle
 1) Open Shell or Command Prompt and navigate to the directory where this repository is cloned.
 2) Build the Assertion
    ```
-     gradle build
+     ./gradlew build
    ```
 3) Ensure your docker environment is properly setup.
 4) Provide the Layer7 API Gateway license at `docker/license.xml`.
