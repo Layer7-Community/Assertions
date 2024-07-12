@@ -5,8 +5,8 @@
 version: '3.4'
 services:
   gateway-dev:
-    hostname: gateway-dev
-    image: caapim/gateway:10.1.00
+    hostname: gateway-delay
+    image: caapim/gateway:11.1.00
     ports:
       - "8080:8080"
       - "8443:8443"

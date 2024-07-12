@@ -10,7 +10,7 @@ group = 'com.ca.apim.gateway.assertion'
 version = '1.1.0'
 
 description = 'This assertion adds a delay of X milliseconds to a policy. It effectively behaves as a sleep action during policy execution. It is intended be used for development and testing purposes only - not production.'
-jar.baseName = 'DelayAssertion'
+jar.archiveBaseName = 'DelayAssertion'
 
 repositories {
     mavenCentral()
@@ -19,14 +19,16 @@ repositories {
     }
 }
 
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
 
 configurations {
     // dependencies that do not need to be bundled in the assertion's jar
     provided
 
-    compile {
+    implementation {
         extendsFrom provided
     }
 }
@@ -34,13 +36,13 @@ configurations {
 dependencies {
     provided 'com.l7tech:layer7-api:8.11.02.+'
 
-    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.28.2'
-    testCompile group: 'junit', name: 'junit', version: '4.13'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.12.0'
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.10.3'
 }
 
 project.jar {
     // add dependencies to the jar's `lib` directory
     into('lib') {
-        from project.configurations.runtime - project.configurations.provided
+        from project.configurations.runtimeClasspath - project.configurations.provided
     }
 }

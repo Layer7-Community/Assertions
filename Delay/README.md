@@ -4,7 +4,7 @@ This assertion adds a delay of X milliseconds to a policy. It effectively behave
 # Build
 In order to build the assertion run `gradle build`.
 
-> **Note**: Tested with Gradle 6.9.4 and JDK "Temurin" 11
+> **Note**: Tested with Gradle 8.9 (latest) and JDK "Temurin" 11
 
 This will compile, test, and create the jar file. It will be available in `build/libs`
 
