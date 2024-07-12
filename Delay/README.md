@@ -4,10 +4,14 @@ This assertion adds a delay of X milliseconds to a policy. It effectively behave
 # Build
 In order to build the assertion run `gradle build`.
 
+> **Note**: Tested with Gradle 6.9.4 and JDK "Temurin" 11
+
 This will compile, test, and create the jar file. It will be available in `build/libs`
 
 # Adding Libraries
 In order to build the custom assertion, the Layer7 API Gateway API jar is required to be put into the lib directory.
+
+> You may find the JAR in the `lib` folder under the Policy Manager install, e.g. `/Applications/PolicyManager-11.app/lib/layer7-api-8.11.02.14811.jar`
 
 # Run
 Docker version of Gateway greatly helps us to deploy assertions / RESTMAN bundles quickly. Please follow the steps below to run the container Gateway prepopulated with this example assertion and example services.
