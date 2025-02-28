@@ -12,11 +12,9 @@ This assertion allows users to execute commands on a remote server via a SSH ses
 
 
 ## Build Instructions
-1) Use IntelliJ and load project's pom file.
-2) For GW 10/11 using JDK 11. Ensure your build environment has matching JDK version with Gateway's. Run ```java -version``` from the command line to verify the version is correct. Ensure the Intellij's Java language level set to 11.
-3) Grab the following Gateway dependencies from Policy Manager's lib folder:
+1) Grab the following Gateway dependencies from Policy Manager's lib folder:
 
-   * layer7-api-8.11.01.jar
+   * layer7-api.jar
    * layer7-gateway-common.jar
    * layer7-gui.jar
    * layer7-policy.jar
@@ -27,12 +25,10 @@ This assertion allows users to execute commands on a remote server via a SSH ses
    <br><br>
    If building the assertion on Linux, grab the dependencies from the Linux installed Policy Manager.
    <br><br>
-4) From IntelliJ's File/Project Structure/Libraries, add the above jars.  Then add the ganymed-ssh2-263.jar file listed as a dependency above.
-5) Ensure all the code has its symbols resolved.   
-6) To build jar artifact, File/Project Structure/Artifacts/+
-    Select Jar / From Modules with Dependencies.  There is no main class.  Select option copy to the output directory.... Press ok , then apply, and ok.
-7) Now build the artifact.  Build/Build Artifact.  Ensure the sshcommand.jar has the ganymed-ssh2-263.jar inside the lib folder.
-8) Now follow the SSH Command Assertion's User guide to install.  Only need to copy over SshCommandAssertion.jar to Gateway's /opt/SecureSpan/Gateway/runtime/modules/lib.
+2) Add the jars to the folder specified in build.gradle dependencies section (see TODO comment).
+3) Run build using Gradle wrapper: `./gradlew build`
+4) Go to `build/libs` folder where SshCommandAssertion.jar is built
+5) Now follow the SSH Command Assertion's User guide to install.  Only need to copy over SshCommandAssertion.jar to Gateway's /opt/SecureSpan/Gateway/runtime/modules/lib.
 
 ## Additional Information
    * See user guide [here](SSH%20Command%20Assertion%20-%20User%20Guide.pdf).
